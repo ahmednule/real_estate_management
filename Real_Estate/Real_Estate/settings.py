@@ -35,7 +35,9 @@ EMAIL_USE_TLS=config('EMAIL_USE_TLS', default='')
 EMAIL_HOST_USER=config('EMAIL_HOST_USER', default='')
 EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD', default='')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS=['real-estate-management-p5fa.onrender.com', 'localhost', '127.0.0.1']
+
+CSRF_TRUSTED_ORIGINS=['https://real-estate-management-p5fa.onrender.com']
 
 
 # Application definition
