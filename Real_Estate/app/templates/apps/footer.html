@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+</head>
+<body>
+    <section class="footer">
+        <footer>
+          <div class="row">
+            <div class="column">
+              <img src="/static/Images/spp.png"  class="logo">
+              <p>Selling or renting out your property is no longer a tedious task. 
+                You can easily sell or rent out a property online with Optiven Real Estate Portal, 
+                List your property with us and we help you find the ideal buyer or tenant quickly and conveniently. 
+                Start posting your property by clicking the property type of your choice.
+              </p>
+            </div>
+            <div class="column">
+              <h3>Office</h3>
+              <p>Pangani Rd, <br>Nairobi Campus, Kochi, <br>Parklands,<br> Nairobi 00100</p>
+              <p class="email-id">miriamkemuto@gmail.com</p>
+              <h4>+254 743 087630</h4>
+            </div>
+            <div class="column">
+              <ul>
+                <h3>Links</h3>
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="{% url 'about' %}">About us</a></li>
+              <li><a href="{% url 'login' %}">Login</a></li>
+              <li><a href="{% url 'contact' %}">Contact Us</a></li>
+              <ul>
+            </div>
+            <div class="column">
+              <h3>Newsletter</h3>
+              <form action="">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Enter your email id">
+                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+              </form>
+              <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-pinterest"></i>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <p class="copyright">Copyright © 2024, Optiven Esate management. All rights reserved.</p>
+        </footer>
+        </section>
+      
+</body>
+</html>

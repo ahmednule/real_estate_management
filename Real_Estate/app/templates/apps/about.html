@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    
+</head>
+<body>
+    <section class="about">
+    <h1>About Us</h1>
+    <h2>Why Choose Us?</h2>
+    
+    <p>
+        Optiven Ventures, founded in 2024 by Miriam Kibore, a graduate of Nairobi Technical Training Institute, brings a fresh perspective to the real estate market. As a team with firsthand experience in understanding client needs, we are committed to offering personalized, exceptional service. We entered the market to stand out and redefine real estate with a focus on quality and care.
+
+Choose us because we’re new in the market and genuinely care about helping you find your next home with confidence and ease. Let Optiven Ventures be your trusted partner in all your real estate needs.
+    </p>
+    <div class="k">
+        <div class="1">
+            <div class="icon"> &#129309</div>
+            <div class="text">Personal Relationship</div>
+        </div>
+        <div class="2">
+            <div class="icon"> &#127895</div>
+            <div class="text">Exceptional Services</div>
+        </div>
+        <div class="3">
+            <div class="icon">&#128178</div>
+            <div class="text">Affordable Rates</div>
+        </div>
+    </div>
+</section>
+    {% include 'apps\footer.html' %}
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    
+</head>
+<body>
+    <section class="contact" id="contact">
+        <div class="con">
+        <div class="content">
+          <h2>Get In Touch</h2>
+          <p>Contact us and get your dream property.We are here to help.</p> 
+        </div>
+        <div class="container">
+          <div class="contact-info">
+            <div class="box">
+             <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="text"><h3>Address</h3>
+              <p>Kinfra Office Rd, <br>Infopark Campus, Kochi, <br>Kakkanad,<br> Kerala 682030</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+               <div class="text"><h3>Phone</h3>
+               <p>0123456789</p>
+               </div>
+             </div>
+             <div class="box">
+              <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+               <div class="text"><h3>Email</h3>
+               <p>soumyapkpzha@gmail.com</p>
+               </div>
+             </div>
+          </div>
+          <div class="contactform">
+            <form action="" method="post">
+              {% csrf_token %}
+              <h2>Send Message</h2>
+              <div class="inputbox">
+                <input type="text" name="name" required="required">
+                <span>Full Name</span>
+              </div>
+              <div class="inputbox">
+                <input type="text" name="email" required="required">
+                <span>Email</span>
+              </div>
+              <div class="inputbox" name="message">
+                <textarea  name="message" required="required"></textarea>
+                <span name="message">Type your Message...</span>
+              </div>
+              <div class="inputbox">
+                <input type="submit" name="" value="Send">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      {% include 'apps\footer.html' %}
+</body>
+</html>

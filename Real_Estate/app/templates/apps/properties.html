@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'properties.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Your Favorite Property</h1>
+        <div class="prop">
+            <div class="p1">
+                <h2>House</h2>
+                <p>Do you want house for sale?</br><a href="{% url 'houses' %}">click here</a></p>
+                <p>Do you want house for rent?</br><a href="{% url 'houser' %}">click here</a></p>
+            </div>
+            <div class="p2">
+                <h2>Apartment</h2>
+                <p>Do you want apartment for sale?<br><a href="{% url 'apartments' %}">click here</a></p>
+                <p>Do you want apartment for rent?<br><a href="{% url 'apartmentr' %}">click here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

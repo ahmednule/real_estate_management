@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'houser.css' %}">
+   
+</head>
+<body>
+    <div class="container">
+        <h1>House For Rent</h1>
+        
+        
+        <div class="house">
+            {% for house_rent in house_rents %}
+            <div class="hs1">
+                
+                <div class="img">
+                <img src="{{house_rent.image.url}}" alt="">
+               
+                </div>
+                
+                <h2>{{house_rent.name}}</h2>
+                
+                <div class="details">
+                    
+                    <div class="location">
+                        <h5>Location</h5>
+                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <p>{{house_rent.location}}</p>
+                    </div>
+                    <div class="lotsize">
+                        <h5>Lot Size</h5>
+                        <div class="icon"><img src="/static/Images/houses/lotsize.png" alt=""></div>
+                        <p>{{house_rent.lot_size}}</p>
+                    </div>
+                    <div class="bed">
+                        <h5>Beds</h5>
+                        <div class="icon"><i class="fa-solid fa-bed"></i></div>
+                        <p>{{house_rent.beds}}</p>
+                    </div>
+
+                    <div class="bath">
+                        <h5>Baths</h5>
+                        <div class="icon"><i class="fa-solid fa-bath"></i></div>
+                        <p>{{house_rent.baths}}</p>
+                    </div>
+                    <div class="garage">
+                        <h5>Garage</h5>
+                        <div class="icon"><img src="/static/Images/houses/garage icon.png" alt=""></div>
+                        <p>{{house_rent.garage}}</p>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="overlay center">
+                    <a href="{% url 'contact' %}" class="buy-btn">Buy Now</a>
+                </div>
+                
+            </div>
+        {% endfor %}
+        </div>
+        <div class="arrow">
+            <button class="left" onclick="left()"><</button>
+            <button class="right" onclick="right()">></button>
+        </div>
+    </div>
+    <script src="{% static 'houser.js' %}"></script>
+   
+</body>
+</html>

@@ -1,0 +1,41 @@
+.container{
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#380036,#0cbaba);
+    height:98vh;
+    
+}
+h1{
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+    font-size: 40px;
+}
+.prop{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    gap: 30px;
+    margin-left: 400px;
+    margin-top: 50px;
+    background: rgba(0,0,0,0.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,0.6);
+}
+.p1,.p2{
+    background-color: rgb(224, 213, 213);
+    height: 250px;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h2{
+    margin-top: 40px;
+    color: #380036;
+    font-size: 30px;
+}
+p{
+    font-size: 25px;
+}

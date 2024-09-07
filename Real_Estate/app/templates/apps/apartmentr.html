@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'apartmentr.css' %}">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Find Co-living Spaces</h1>
+        
+        
+        <div class="house">
+            {% for apartmentr in apartmentrs %}
+            <div class="hs1">
+                
+                <div class="img">
+                <img src="{{apartmentr.image.url}}" alt="">
+                
+                
+                
+               
+                </div>
+                
+                <h2>{{apartmentr.name}}</h2>
+                
+                <div class="details">
+                    
+                    <div class="location">
+                        <h5>Location</h5>
+                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <p>{{apartmentr.location}}</p>
+                    </div>
+                    <div class="lotsize">
+                        <h5>Lot Size</h5>
+                        <div class="icon"><img src="/static/Images/houses/lotsize.png" alt=""></div>
+                        <p>{{apartmentr.lot_size}}</p>
+                    </div>
+                    <div class="bed">
+                        <h5>Beds</h5>
+                        <div class="icon"><i class="fa-solid fa-bed"></i></div>
+                        <p>{{apartmentr.beds}}</p>
+                    </div>
+
+                    <div class="bath">
+                        <h5>Baths</h5>
+                        <div class="icon"><i class="fa-solid fa-bath"></i></div>
+                        <p>{{apartmentr.baths}}</p>
+                    </div>
+                    <div class="garage">
+                        <h5>Garage</h5>
+                        <div class="icon"><img src="/static/Images/houses/garage icon.png" alt=""></div>
+                        <p>{{apartment.garage}}</p>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div class="overlay center">
+                    <a href="{% url 'contact' %}" class="buy-btn">Buy Now</a>
+                </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+        <div class="arrow">
+            <button class="left" onclick="left()"><</button>
+            <button class="right" onclick="right()">></button>
+        </div>
+    </div>
+    <script src="{% static 'apartmentr.js' %}"></script>
+    
+</body>
+</html>

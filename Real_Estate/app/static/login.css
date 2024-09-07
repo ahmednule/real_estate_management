@@ -1,0 +1,96 @@
+.login{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+.login .imgbox{
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.login .imgbox::before{
+    content:'' ;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,#e91e63,#03a9f4);
+    z-index: 1;
+    mix-blend-mode: screen;
+}
+.login .imgbox img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.login .contentbox{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+   
+}
+.login .contentbox .formbox{
+    width: 50%;
+}
+.login .contentbox .formbox h2{
+    color: #607d8b;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ff4584;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+.login .contentbox .formbox .inputbox{
+    margin-bottom: 20px;
+}
+.login .contentbox .formbox .inputbox span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #607d8b;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.login .contentbox .formbox .inputbox input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 30px;
+}
+.login .contentbox .formbox .inputbox input[type="submit"]{
+    background: #ff4584;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.login .contentbox .formbox .inputbox input[type="submit"]:hover{
+    background: #f53677;
+}
+.login .contentbox .formbox .remember{
+    margin-bottom: 10px;
+    color: #607d8b;
+    font-weight: 400;
+    font-size: 14px;
+}
+.login .contentbox .formbox .inputbox p{
+    color: #607d8b;
+}
+.login .contentbox .formbox .inputbox p a{
+    color: #ff4584;
+}
